@@ -1,0 +1,73 @@
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="Rishita">
+  <meta name="Description" content="display">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2249/2249539.png" type="image/icon type">
+  <title>Percentage</title>  
+   
+  <style>
+    .center {
+      text-align: center;
+      color:yellow;
+    }
+    </style>
+  <style>
+    body {
+      background-color:indigo;
+    }
+    </style>
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      </style>
+  <style>input{
+
+    margin: auto;
+    
+    display: block;
+    
+    }</style>
+
+    
+</head>
+<body>
+   
+  <h1 class="center"><b style="color:yellow;">WELCOME USER</b></h1>
+  <p class="center"> <b><i style="color:yellow;">Hello Dear {{name}}!!</i></b></p> 
+  <img src="https://www.seamo.ca/sites/seamo.ca/files/inline-images/Arrivals%20Photo%20-%20cropped%20200_10.jpg"
+   alt="welcome page img" width="300">
+
+  <form action="/calculate" action="#" method="post"> 
+  
+  <p class="center"><strong>---------------Here are your Details:---------------</strong></p>
+  <hr>
+
+
+   <p class="center" style="color:yellow;">Your age is <b>{{age}}</b>. </p>
+   <p class="center" style="color:yellow;">Your date of birth is <b>{{dob}}</b>.</p>
+    <p class="center" style="color:yellow;">Name of your School is <b>{{school}}</b>.</p>
+    <p class="center" style="color:yellow;">Name of your Board is <b>{{board}}</b>.</p>
+  
+  <hr>
+  <div>
+  <input type="number" class="input" style="height: 9.5%; width: 20%;" background-color: green; maxlength="3" minlength="1" max="100" min="1" name="eng"  placeholder="Enter marks in english subject" required/>
+    <br><br>
+    <input type="number" class="input" style="height: 9.5%; width: 20%;" background-color: green; maxlength="3" minlength="1" max="100" min="1" name="math"  placeholder="Enter marks in maths subject" required/>
+    <br><br>
+    <input type="number" class="input" style="height: 9.5%; width: 20%;" background-color: green; maxlength="3" minlength="1" max="100" min="1" name="sci"  placeholder="Enter marks in science subject" required/>
+    <br><br>
+    <input type="number" class="input" style="height: 9.5%; width: 20%;" background-color: green; maxlength="3" minlength="1" max="100" min="1" name="oops"  placeholder="Enter marks in OOPS subject" required/>
+    <br><br>
+    <input type="number" class="input" style="height: 9.5%; width: 20%;" background-color: green; maxlength="3" minlength="1" max="100" min="1" name="de"  placeholder="Enter marks in digital electronics subject" required/>
+    
+    <hr>
+   </div>
+
+
+    <input type="submit" value="CALCULATE">
+</body>
+</html>
