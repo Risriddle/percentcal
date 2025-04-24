@@ -85,8 +85,8 @@ class Calculate(Resource):
     math = request.form.get('math')
     sci = request.form.get('sci')
     dbms = request.form.get('dbms')
-    de = request.form.get('de')
-    percent= ((int(eng)+int(math)+int(de)+int(dbms)+int(sci))/500)*100
+    # de = request.form.get('de')
+    percent= ((int(eng)+int(math)+int(dbms)+int(sci))/500)*100
     return make_response(render_template('calculate.html',percent=percent))
     def exit():
         return make_response(render_template('welcome.html'))
