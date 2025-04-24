@@ -53,7 +53,7 @@ class Login(Resource):
 
     dict = {"name":name,"email":email,"pass":pwd,"age":age,"dob":dob,"school":school,"board":board}
     collection.insert_one(dict)
-    print("-------------------------------")
+  
     print("Data store to db")
     return make_response(render_template('login.html')) 
 
@@ -63,13 +63,12 @@ class Welcome(Resource):
     return make_response(render_template('register.html'))
 
   def post(self):
-    print('==============================================================================================')
     pwd = request.form.get('pass')
     mail = request.form.get('email')
     data = collection.find_one({"email":mail,"pass":pwd},{"_id":0})
-    print("-------------------------------")
+
     if data != None and mail == data['email'] and pwd == data['pass']:
-      print(" Login done --------------------------------")
+     
       print(data)
       return make_response(render_template('welcome.html',name=data['name'],age=data['age'],dob=data['dob'],school=data['school'],board=data['board']))
     else:
@@ -85,9 +84,9 @@ class Calculate(Resource):
     eng = request.form.get('eng')
     math = request.form.get('math')
     sci = request.form.get('sci')
-    oops = request.form.get('oops')
+    dbms = request.form.get('dbms')
     de = request.form.get('de')
-    percent= ((int(eng)+int(math)+int(de)+int(oops)+int(sci))/500)*100
+    percent= ((int(eng)+int(math)+int(de)+int(dbms)+int(sci))/500)*100
     return make_response(render_template('calculate.html',percent=percent))
     def exit():
         return make_response(render_template('welcome.html'))
