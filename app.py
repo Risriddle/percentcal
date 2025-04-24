@@ -53,7 +53,7 @@ class Login(Resource):
 
     dict = {"name":name,"email":email,"pass":pwd,"age":age,"dob":dob,"school":school,"board":board}
     collection.insert_one(dict)
-    print("-------------------------------")
+  
     print("Data store to db")
     return make_response(render_template('login.html')) 
 
@@ -66,9 +66,9 @@ class Welcome(Resource):
     pwd = request.form.get('pass')
     mail = request.form.get('email')
     data = collection.find_one({"email":mail,"pass":pwd},{"_id":0})
-    print("-------------------------------")
+
     if data != None and mail == data['email'] and pwd == data['pass']:
-      print(" Login done --------------------------------")
+     
       print(data)
       return make_response(render_template('welcome.html',name=data['name'],age=data['age'],dob=data['dob'],school=data['school'],board=data['board']))
     else:
