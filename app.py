@@ -63,7 +63,6 @@ class Welcome(Resource):
     return make_response(render_template('register.html'))
 
   def post(self):
-    print('==============================================================================================')
     pwd = request.form.get('pass')
     mail = request.form.get('email')
     data = collection.find_one({"email":mail,"pass":pwd},{"_id":0})
