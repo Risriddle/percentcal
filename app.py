@@ -104,4 +104,4 @@ api.add_resource(Register, '/register',methods=['GET', 'POST'])
 api.add_resource(Calculate, '/calculate',methods=['GET', 'POST'])
 
 if __name__ == '__main__':
-    app.run(debug=True)   
+    app.run(debug=False)   
